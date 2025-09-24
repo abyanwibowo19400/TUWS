@@ -1,0 +1,28 @@
+/* ... (kode CSS Anda sebelumnya) ... */
+
+/* Styling untuk bagian prediksi */
+.prediction-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.prediction-title {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.prediction-result {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 5px;
+    color: #ffde59; /* Warna kuning untuk menonjolkan prediksi */
+}
+.angin{
+    font-size: 1em;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}

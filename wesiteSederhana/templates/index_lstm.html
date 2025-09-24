@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediksi Cuaca LSTM</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f4f8; }
+        .card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 400px; }
+        .current-weather { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        .prediction-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 0.5rem; text-align: left; }
+        .prediction-grid strong { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Prediksi Cuaca Multi-Output LSTM</h2>
+        <div class="current-weather">
+            <h3>Cuaca Saat Ini</h3>
+            <p>Suhu: <strong>{{ suhu }}°C</strong> | Kelembapan: <strong>{{ kelembapan }}%</strong></p>
+        </div>
+        <div class="predictions">
+            <h3>Hasil Prediksi</h3>
+            <div class="prediction-grid">
+                {% for p in hasil_prediksi %}
+                    <strong>+ {{ p.waktu }} menit:</strong>
+                    <span>{{ p.prediksi }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-card">
+        <div class="weather-header">
+            <h1>{{ kota }}</h1>
+        </div>
+
+        <div class="weather-body">
+            <img src="{{ ikon }}" alt="Ikon Cuaca">
+            <p class="suhu">{{ suhu }}°C</p>
+        </div>
+
+        <div class="weather-footer">
+            <p class="deskripsi">{{ deskripsi }}</p>
+            <p class="kelembapan">Kelembapan: {{ kelembapan }}%</p>
+            <p class="angin"> Angin: {{kecepatan_angin}} m/s dari arah {{arah_angin}}</p>
+        </div>
+
+        <div class="prediction-info">
+            <p class="prediction-title">Prediksi 30 Menit ke Depan:</p>
+            <p class="prediction-result">{{ prediksi }}</p>
+        </div>
+        </div>
+</body>
+</html>
