@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # --- KONFIGURASI ---
-FILE_INPUT = "dataset/data_cuaca_augmented.csv"
+FILE_INPUT = "dataset/data_cuaca_historis_bandung.csv"
 FILE_OUTPUT_X = "X_sekuensial.npy"
 FILE_OUTPUT_Y = "y_multi_output.npy"
 

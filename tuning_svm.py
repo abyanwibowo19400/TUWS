@@ -7,7 +7,7 @@ import joblib
 # --- 1. MEMUAT DAN MEMPERSIAPKAN DATA ---
 print("--- Memuat dan Mempersiapkan Data ---")
 # Ganti dengan nama file data lengkap Anda jika berbeda
-df = pd.read_csv("dataset/data_cuaca_augmented.csv", encoding='latin1')
+df = pd.read_csv("dataset/data_cuaca_historis_bandung.csv", encoding='latin1')
 
 # Lakukan feature engineering target seperti sebelumnya
 # (Ini disederhanakan, Anda bisa copy-paste fungsi dari skrip sebelumnya jika perlu)
@@ -20,8 +20,17 @@ y = df['target_prediksi']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 # Scaling data (wajib untuk SVM)
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
+# scaler = StandardScaler()
+# X_train_scaled = scaler.transform(X_train)
+# X_test_scaled = scaler.transform(X_test)
+try:
+    # scaler = joblib.load('scalerData.joblib')
+    scaler = joblib.load('scalerData.joblib')
+except FileNotFoundError:
+    print("Sclaer tidak ditemukan")
+    exit()
+
+X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 # --- 2. DEFINISIKAN GRID PARAMETER UNTUK DICOBA ---

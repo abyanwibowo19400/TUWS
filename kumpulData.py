@@ -15,7 +15,7 @@ LON = "107.630529"
 #API_URL = f"https://api.openweathermap.org/data/2.5/weather?lat={LAT}&lon={LON}&appid={API_KEY}&units=metric"
 API_URL= f"https://api.openweathermap.org/data/2.5/weather?q={KOTA}&appid={API_KEY}&units=metric&lang=id"
 
-NAMA_FILE_CSV = "dataset\data_cuaca_historis_bandung.csv"
+NAMA_FILE_CSV = "dataset/data_cuaca_historis_bandung.csv"
 INTERVAL_DETIK = 60  # 1 menit (1 * 60 detik)
 
 def ambil_dan_simpan_data():

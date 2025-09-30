@@ -104,7 +104,7 @@ URL = "https://api.weather.com/v2/pws/observations/current?stationId=IBANDU75&fo
 print("Memuat model machine learning...")
 try:
     # Ganti dengan nama file model XGBoost Anda
-    model = joblib.load('model_prediksi_hujan_darimana_XGBoost.joblib')
+    model = joblib.load('model_svm_tuned.joblib')
     print("Model berhasil dimuat.")
 except FileNotFoundError:
     print("Error: File model tidak ditemukan.")
