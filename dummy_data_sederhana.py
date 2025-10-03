@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 
 # --- KONFIGURASI ---
-FILE_INPUT = "dataset/data_cuaca_historis_bandung.csv"
-FILE_OUTPUT = "dataset/data_cuaca_augmented.csv" # Nama file baru untuk data yang sudah ditambah
+# FILE_INPUT = "dataset/data_cuaca_historis_bandung.csv"
+FILE_INPUT = "dataset/data_cuaca_telkom_MASTER.csv"
+# FILE_OUTPUT = "dataset/data_cuaca_augmented.csv" # Nama file baru untuk data yang sudah ditambah
+FILE_OUTPUT = "dataset/data_cuaca_augmented_telkom.csv" # Nama file baru untuk data yang sudah ditambah
 JUMLAH_TEMPLATE = 20 # Jumlah data hujan terakhir yang dijadikan template 10 - 30
 
 # ==============================================================================

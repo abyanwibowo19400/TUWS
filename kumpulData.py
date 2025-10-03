@@ -41,7 +41,7 @@ def ambil_dan_simpan_data():
             'arah_angin': data['wind']['deg'],
             'tekanan_udara': data['main']['pressure'],
             'intensitas_hujan': intensitas_hujan # Intensitas hujan dalam 1 jam terakhir (mm)
-        }
+        } 
         
         df_new = pd.DataFrame([data_to_save])
         
